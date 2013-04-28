@@ -25,6 +25,7 @@
 		188ACFAE172CF34A0048402B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 188ACFA8172CF34A0048402B /* FMDatabaseQueue.m */; };
 		188ACFAF172CF34A0048402B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 188ACFAA172CF34A0048402B /* FMResultSet.m */; };
 		188ACFB1172CF78C0048402B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 188ACFB0172CF78C0048402B /* libsqlite3.dylib */; };
+		188ACFB6172D2EB30048402B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 188ACFB5172D2EB30048402B /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		188ACFAA172CF34A0048402B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		188ACFB0172CF78C0048402B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		188ACFB2172CFC4E0048402B /* MacroUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroUtils.h; sourceTree = "<group>"; };
+		188ACFB4172D2EB30048402B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		188ACFB5172D2EB30048402B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 		188ACF80172CE8290048402B /* FmdbDemo */ = {
 			isa = PBXGroup;
 			children = (
+				188ACFB3172D2E930048402B /* Model Class */,
 				188ACFA0172CF3380048402B /* FMDB */,
 				188ACFB2172CFC4E0048402B /* MacroUtils.h */,
 				188ACF9D172CF2B60048402B /* wywDatabaseCenter.h */,
@@ -149,6 +153,15 @@
 				188ACFAA172CF34A0048402B /* FMResultSet.m */,
 			);
 			name = FMDB;
+			sourceTree = "<group>";
+		};
+		188ACFB3172D2E930048402B /* Model Class */ = {
+			isa = PBXGroup;
+			children = (
+				188ACFB4172D2EB30048402B /* User.h */,
+				188ACFB5172D2EB30048402B /* User.m */,
+			);
+			name = "Model Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +240,7 @@
 				188ACFAD172CF34A0048402B /* FMDatabasePool.m in Sources */,
 				188ACFAE172CF34A0048402B /* FMDatabaseQueue.m in Sources */,
 				188ACFAF172CF34A0048402B /* FMResultSet.m in Sources */,
+				188ACFB6172D2EB30048402B /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +363,7 @@
 				188ACF9C172CE8290048402B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

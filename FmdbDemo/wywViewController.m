@@ -34,7 +34,8 @@
 
 - (IBAction)featchData:(id)sender {
     wywDatabaseCenter * dataCenter = [wywDatabaseCenter sharedDatabaseCenter];
-    [dataCenter fetchAllUsers];
+   NSMutableArray * rs_arr =  [dataCenter fetchAllUsers];
+    NSLog(@"featch rs:%@",rs_arr);
 }
 
 - (IBAction)multithreadInsertData:(id)sender {

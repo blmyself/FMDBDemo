@@ -8,6 +8,7 @@
 
 #import "wywDatabaseCenter.h"
 #import "FMDatabaseQueue.h"
+#import "User.h"
 
 #define DB_NAME @"db.sqlite"
 #define DB_FILE_PATH [PATH_OF_DOCUMENT stringByAppendingPathComponent:DB_NAME]
@@ -120,12 +121,20 @@
     if (db) {
         NSString * sql = @"select * from user";
        FMResultSet *rs = [db executeQuery:sql];
-        while ([rs next]) {
+        while ([rs next]) {            
             int userId  = [rs intForColumn:@"id"];
             NSString * name = [rs stringForColumn:@"name"];
             NSString * pwd =  [rs stringForColumn:@"password"];
-            NSDictionary *rsDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:userId],@"id",name,@"name",pwd,@"password", nil];
-            [result addObject:rsDic];
+            
+            //init user object
+            User * user = [[User alloc]init];
+            user.userId = userId;
+            user.name = name;
+            user.password = pwd;
+            
+            //fill data
+            [result addObject:user];
+            
             debugLog(@"user id = %d, name = %@, pass = %@", userId, name, pwd);
         }
         [rs close];
