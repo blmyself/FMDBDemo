@@ -1,2 +1,6 @@
 
 .DS_Store
+
+*.xcuserstate
+
+FmdbDemo.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad/UserInterfaceState.xcuserstate
